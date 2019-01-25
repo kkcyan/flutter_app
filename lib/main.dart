@@ -9,6 +9,7 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_app/state_y.dart';
 import 'package:flutter_app/image_y.dart';
 import 'package:flutter_app/switch_y.dart';
+import 'package:flutter_app/login_y.dart';
 
 void main() => runApp(MyApp());
 
@@ -79,7 +80,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
           RaisedButton(
             child: Text("normal"),
-            onPressed: () => {},
+            onPressed: (){
+              Navigator.push(context, new MaterialPageRoute(builder: (ctx){
+                return new FormTestRoute();
+              }));
+            },
           ),
 
             FlatButton(onPressed: (){
